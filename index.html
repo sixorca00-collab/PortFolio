@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Olarte — Junior FullStack Developer</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mint:        '#57EBAB',
+                        'brand-purple': '#C02DED',
+                        'dark-bg':   '#0F0F0F',
+                        'dark-card': '#1A1A1A',
+                        'dark-border':'#2A2A2A',
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body:    ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Fondo de partículas animadas -->
+    <div id="particle-container" aria-hidden="true"></div>
+
+    <!-- Navegación sticky -->
+    <nav role="navigation" aria-label="Navegación principal">
+        <a href="#hero"     class="nav-link" data-section="hero">Inicio</a>
+        <a href="#projects" class="nav-link" data-section="projects">Proyectos</a>
+        <a href="#skills"   class="nav-link" data-section="skills">Skills</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="page-wrap">
+
+        <!-- Hero — renderizado por View.renderHeader() -->
+        <header id="hero" class="pt-16">
+            <div id="hero-content"></div>
+        </header>
+
+        <!-- Proyectos — renderizado por View.renderProjectFilters() + View.renderProjects() -->
+        <section id="projects" class="py-20 px-6 md:px-12">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div id="project-filters" class="filters-wrap"></div>
+            <div id="projects-container"
+                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            </div>
+        </section>
+
+        <!-- Habilidades — renderizado por View.renderSkillFilters() + View.renderSkills() -->
+        <section id="skills" class="py-20 px-6 md:px-12 bg-black bg-opacity-30">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div id="skill-filters" class="filters-wrap"></div>
+            <div id="skills-container" class="skills-grid max-w-5xl mx-auto"></div>
+        </section>
+
+        <!-- Footer — renderizado por View.renderFooter() -->
+        <footer>
+            <div id="footer-content"></div>
+        </footer>
+
+    </div>
+
+    <!-- MVC: Model → View → Controller (orden de carga importa) -->
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+</html>
