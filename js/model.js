@@ -32,7 +32,8 @@ const Model = {
             description: "Plataforma para medir la eficiendia de una persona segun sus actividades con temporizador y metricas.",
             technologies: ["Java", "JavaFX", "Firebase"],
             category: "Backend",
-            url: "https://github.com/sixorca00-collab"
+            url: "https://github.com/sixorca00-collab",
+            status: "soon.."
         },
         {
             id: 2,
@@ -40,7 +41,8 @@ const Model = {
             description: "Organizador de tareas por prioridad, nivel de urgencia y advertencai de cuanto tiempo te queda para cumplirla.",
             technologies: ["Java", "Spring", "MongoDB"],
             category: "Frontend",
-            url: "https://github.com/sixorca00-collab"
+            url: "https://github.com/sixorca00-collab",
+             status: "soon.."
         },
         {
             id: 3,
@@ -48,7 +50,8 @@ const Model = {
             description: "Sistema interactivo para gestion de tu salario con ayuda de metricas y recibir feedback.",
             technologies: ["Java","Tailwind", "Js", "Firebase"],
             category: "Frontend",
-            url: "https://github.com/sixorca00-collab"
+            url: "https://github.com/sixorca00-collab",
+             status: "soon.."
         },
         {
             id: 4,
@@ -56,7 +59,8 @@ const Model = {
             description: "API RESTful robusta con autenticación JWT, validación de datos y documentación completa con Swagger.",
             technologies: ["Spring Boot", "Java", "H2Databases"],
             category: "Backend",
-            url: "https://github.com/sixorca00-collab"
+            url: "https://github.com/sixorca00-collab",
+             status: "soon.."
         },
         {
             id: 5,
@@ -64,7 +68,8 @@ const Model = {
             description: "Sistema de mensajería en tiempo real con WebSockets, soporte para múltiples canales y notificaciones push.",
             technologies: ["Spring Boot", "WebSocket", "HTML-CSS"],
             category: "Backend",
-            url: "https://github.com/sixorca00-collab"
+            url: "https://github.com/sixorca00-collab",
+             status: "soon.."
         },
         {
             id: 6,
@@ -72,7 +77,8 @@ const Model = {
             description: "Portafolio personal con diseño responsivo, animaciones suaves y arquitectura MVC frontal.",
             technologies: ["HTML5", "CSS3", "JavaScript"],
             category: "Frontend",
-            url: "https://github.com/sixorca00-collab"
+            url: "https://github.com/sixorca00-collab",
+             status: "soon.."
         }
     ],
 

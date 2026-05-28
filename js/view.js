@@ -33,39 +33,111 @@ const View = {
     },
 
     // --- Tarjetas de proyectos ---
-    renderProjects(projects, container) {
-        if (projects.length === 0) {
-            container.innerHTML = `<p class="no-results">No hay proyectos en esta categoría.</p>`;
-            return;
-        }
-        container.innerHTML = projects.map(project => `
-            <div class="flip-card" role="article" aria-label="Proyecto: ${this._escape(project.title)}">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div>
-                            <span class="project-category-badge">${this._escape(project.category)}</span>
-                            <h3>${this._escape(project.title)}</h3>
-                            <p>${this._escape(project.description)}</p>
-                        </div>
-                        <div class="tech-stack">
-                            ${project.technologies.map(t => `<span class="tech-tag">${this._escape(t)}</span>`).join("")}
-                        </div>
+renderProjects(projects, container) {
+
+    if (projects.length === 0) {
+        container.innerHTML = `
+            <p class="no-results">
+                No hay proyectos en esta categoría.
+            </p>
+        `;
+        return;
+    }
+
+    container.innerHTML = projects.map(project => `
+
+        <div
+            class="flip-card"
+            role="article"
+            aria-label="Proyecto: ${this._escape(project.title)}"
+        >
+
+            <div class="flip-card-inner">
+
+                <!-- FRONT -->
+                <div class="flip-card-front">
+
+                    <div class="project-top">
+
+                        <span class="project-category-badge">
+                            ${this._escape(project.category)}
+                        </span>
+
+                        <span class="project-status 
+                            status-${project.status.toLowerCase().replace(/\s+/g, '-')}">
+                            
+                            ${this._escape(project.status)}
+
+                        </span>
+
                     </div>
-                    <div class="flip-card-back">
-                        <a href="${this._escape(project.url)}" target="_blank" rel="noopener noreferrer" class="project-link">
+
+                    <div class="project-content">
+
+                        <h3>
+                            ${this._escape(project.title)}
+                        </h3>
+
+                        <p>
+                            ${this._escape(project.description)}
+                        </p>
+
+                    </div>
+
+                    <div class="tech-stack">
+
+                        ${project.technologies.map(t => `
+
+                            <span class="tech-tag">
+                                ${this._escape(t)}
+                            </span>
+
+                        `).join("")}
+
+                    </div>
+
+                </div>
+
+                <!-- BACK -->
+                <div class="flip-card-back">
+
+                    <div class="back-content">
+
+                        <h3>
+                            ${this._escape(project.title)}
+                        </h3>
+
+                        <p>
+                            Estado:
+                            <strong>
+                                ${this._escape(project.status)}
+                            </strong>
+                        </p>
+
+                        <a
+                            href="${this._escape(project.url)}"target="_blank"rel="noopener noreferrer"class="project-link"
+                        >
+
                             <span>Ver Proyecto</span>
+
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                 <polyline points="15 3 21 3 21 9"/>
                                 <line x1="10" y1="14" x2="21" y2="3"/>
                             </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        `).join("");
-    },
 
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `).join("");
+},
     // --- Filtros de skills ---
     renderSkillFilters(categories, activeCategory, container) {
         container.innerHTML = categories.map(cat => `
