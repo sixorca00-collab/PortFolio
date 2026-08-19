@@ -28,12 +28,12 @@ const Model = {
     projects: [
         {
             id: 1,
-            title: "Zenflow",
-            description: "Plataforma para medir la eficiendia de una persona segun sus actividades con temporizador y metricas.",
-            technologies: ["Java", "JavaFX", "Firebase"],
+            title: "Power-Track",
+            description: "Aplicación de seguimiento fitness orientada a la sobrecarga progresiva. Evalúa el desempeño del usuario combinando métricas objetivas y RPE (Esfuerzo Percibido) para diagnosticar de forma determinista su estado (progresión, mantenimiento o estancamiento) según su objetivo físico.",
+            technologies: ["Java", "JavaFX", "Gradle", "Kotlin", "Postgress"],
             category: "Backend",
-            url: "https://github.com/sixorca00-collab",
-            status: "soon.."
+            url: "https://github.com/orgs/PowerTrackORG/repositories",
+            status: "completed, undergoing improvements"
         },
         {
             id: 2,
@@ -55,12 +55,12 @@ const Model = {
         },
         {
             id: 4,
-            title: "API REST Escalable",
-            description: "API RESTful robusta con autenticación JWT, validación de datos y documentación completa con Swagger.",
-            technologies: ["Spring Boot", "Java", "H2Databases"],
+            title: "Centinela",
+            description: "API de validación transaccional con motor de riesgo integrado. Analiza el comportamiento de cada operación mediante reglas clave (geolocalización, velocidad entre transacciones, comercios bloqueados y desvíos de monto) para calcular un score de confiabilidad en milisegundos.",
+            technologies: ["Spring Boot", "Java", "CosmosDB", "AppService(Azure)"],
             category: "Backend",
-            url: "https://github.com/sixorca00-collab",
-             status: "soon.."
+            url: "https://github.com/Azure-Devils/PayCol",
+             status: "Finished."
         },
         {
             id: 5,
@@ -92,6 +92,8 @@ const Model = {
         { name: "Tailwind",    category: "Frontend" },
         { name: "React",       category: "Frontend" },
         { name: "JavaScript",  category: "Frontend" },
+        { name: "Angular",     category: "Frontend"},
+        {name: "Typescript",   category: "Frontend"},
 
         { name: "PostgreSQL",  category: "Base de Datos" },
         { name: "MongoDB",     category: "Base de Datos" },
