@@ -29,7 +29,7 @@ const Model = {
         {
             id: 1,
             title: "Power-Track",
-            description: "Aplicación de seguimiento fitness orientada a la sobrecarga progresiva. Evalúa el desempeño del usuario combinando métricas objetivas y RPE (Esfuerzo Percibido) para diagnosticar de forma determinista su estado (progresión, mantenimiento o estancamiento) según su objetivo físico.",
+            description: "Aplicación de seguimiento fitness orientada a la sobrecarga progresiva. Evalúa el desempeño del usuario combinando métricas objetivas y RPE (Esfuerzo Percibido) para diagnosticar de forma determinista su estado (progresión, mantenimiento o estancamiento).",
             technologies: ["Java", "JavaFX", "Gradle", "Kotlin", "Postgress"],
             category: "Backend",
             url: "https://github.com/orgs/PowerTrackORG/repositories",
